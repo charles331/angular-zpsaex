@@ -1,0 +1,40 @@
+<h2>Products</h2>
+
+<div *ngFor="let product of products">
+
+  <h3>
+    <a [title]="product.name + ' details'">
+      {{ product.name }}      
+    </a>
+  </h3>
+
+  <p *ngIf="product.description">
+    Description: {{ product.description | uppercase}}
+  </p>
+
+  <button (click)="share()">
+    Share
+  </button>
+
+</div>
+<br><br>
+<button routerLink="/new" >
+    CLICK HERE to go to NEW page
+  </button>
+<br><br>
+list des chats
+
+<div *ngFor="let chat of chats">
+
+  mon chat:<h3>{{chat.name}}</h3>
+
+</div>
+
+list des chats fin
+
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->
